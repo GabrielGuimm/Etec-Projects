@@ -1,0 +1,41 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    double he, me, hs, ms, pag=0, mte, mts, mm, cont=0, adc=0;
+
+    Console.Write("Qual a hora de entrada: ");
+    he = double.Parse(Console.ReadLine());
+    Console.Write("Qual o minuto de entrada: ");
+    me = double.Parse(Console.ReadLine());
+    Console.Write("Qual a hora de saida");
+    hs = double.Parse(Console.ReadLine());
+    Console.Write("Qual a minuto de saida");
+    ms = double.Parse(Console.ReadLine());
+    mte= he *60+me;
+    mts= hs*60+ms;
+    mm=mts-mte;
+    cont=mm/60;
+
+    for(double i=1; i <=cont; i++)
+      adc++;
+      if(cont%60>0)
+        adc++;
+
+    if(mm>=1 && mm<=60)
+    {
+    pag=+4.00;
+    }
+    if(mm>=61 && mm<120){
+      pag=6.00;
+      }
+
+    if(mm>=121){
+
+      adc= adc-2;
+      pag= +adc+6;
+    }
+
+    Console.Write("O valor sera {0:f2}", pag);
+    }
+}
