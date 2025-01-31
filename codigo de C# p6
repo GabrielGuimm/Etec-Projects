@@ -1,0 +1,29 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+double md=0, soma=0, sm1=0, pd=0;
+    int[] id= new int [7];
+    double [] num = new  double[7];
+      for(int i=0; i<=6; i++){
+        Console.Write("qual o seu peso: ");
+        num[i] = double.Parse(Console.ReadLine());
+        if(num[i]>90){
+          pd++;
+        }
+        else{
+          pd= pd+0;
+          
+        }
+        Console.Write("qual sua idade: ");
+        id[i] = int.Parse(Console.ReadLine());
+        soma+=id[i];
+        sm1=num[i];
+        md= soma/(1+i);
+      }
+    Console.WriteLine("Idade Media: {0:f2} ", md);
+    Console.Write("pessoas com mais de 90kg: {0:f2}",pd);
+ 
+    }
+}
