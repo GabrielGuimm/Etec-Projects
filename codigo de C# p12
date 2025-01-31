@@ -1,0 +1,18 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+  
+    double TT, P;
+    P=0;
+    TT=0;
+      for(int i = 1; i <= 25 ; i++){
+      Console.Write("Digite o peso da {0} caixa = ",i);
+      P= double.Parse(Console.ReadLine());
+      TT= TT+P;
+      
+    }
+    Console.Write("o peso total das caixas é ={0}", TT);
+
+    }
+}
