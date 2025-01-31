@@ -1,0 +1,17 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    double [] km= new double[2];
+    double [] vl= new double[2];
+    double [] li= new double[2];
+    km[0]=520;
+    km[1]=12;
+    li[0]= 1;
+    vl[0]= 1.50;
+    li[1]= km[0]/km[1];
+    vl[1]= li[1]*vl[0];
+    Console.Write("ira precisar de {0:f2} litros de gasolina e maria vai gasstar {1:f2} em gasolina ",li[1], vl[1]);
+    }
+}
