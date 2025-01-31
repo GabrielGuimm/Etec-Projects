@@ -1,0 +1,20 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    double [] va= new double[2];
+    double [] vb= new double[2];
+    double [] le= new double[2];
+    Console.Write("Digite um numero:  ");
+    va[1]= double.Parse(Console.ReadLine());
+    Console.Write("Digite um numero:  ");
+    vb[1]= double.Parse(Console.ReadLine());
+    Console.Write("o valor do primeiro numero é: {0} ",va[1]);
+    Console.Write("o valor do segundo numero é: {0} ",vb[1]);
+    va[0]=vb[1];
+    vb[1]=va[1];
+    Console.Write("o valores foram invertidos agora o primeiro é {0} e o segundo {1} ",va[0], vb[1]);
+    
+    }
+}
