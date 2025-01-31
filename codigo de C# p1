@@ -1,0 +1,43 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    string[] nm = new string[1];
+    double[] salb = new double[1];
+    double[] sall = new double[1];
+    double[] nd = new double[1];
+    
+
+    for (int i = 0; i < 1; i++)
+    {
+        Console.WriteLine("Qual o nome do funcionario: ");
+        nm[i] = Console.ReadLine();
+
+        Console.WriteLine("qual o salario do funcionario: ");
+        salb[i] = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("numero de dependentes: ");
+        nd[i] = double.Parse(Console.ReadLine());
+
+        double salbase = 0;
+
+        if (salb[i] <= 300)
+        {
+            salbase = salb[i] * 0.08;
+        }
+      else if (salb[i] > 301 && salb[i] <= 700)
+        {
+            salbase = salb[i] * 0.09;
+        }
+      else if (salb[i] > 700)
+        {
+            salbase = salb[i] * 0.10;
+        }
+
+        sall[i] = salbase + (15.00 * nd[i]) + 40.00 + 100.0;
+    }
+    Console.WriteLine("nome do funcionário: " + nm[0]);
+    Console.WriteLine("salario liguido funcionário: R${0:f2}", sall[0]);
+    }
+}
