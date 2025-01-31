@@ -1,0 +1,42 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+      double cp, pe, qt;
+    Console.Write("digite quantos produtos: ");
+    qt = double.Parse(Console.ReadLine());
+    for(int i=1; i <= qt; i++){
+      Console.Write("Digite o preço: ");
+      pe = double.Parse(Console.ReadLine());
+    
+    Console.Write("metodo de pagamento");
+    Console.WriteLine("A vista Dinheiro ou Cheque, 10% de desconto =1=");
+    Console.WriteLine("A vista Cartao de credito, 5% de desconto =2=");
+    Console.WriteLine(" em duas vezes =3=");
+    Console.WriteLine("em tres vezes , 10% de acrescimo =4=");
+    Console.WriteLine("Digite o metodo de pagamento: ");
+    cp = double.Parse(Console.ReadLine());
+
+    switch(cp)
+    {
+      case 1:
+      pe = pe + qt ;
+      Console.Write("necessita pagar: {0:F2} ", pe);
+      break;
+    case 2:
+      pe = pe-(pe*0.05);
+      Console.Write("necessita pagar: {0:F2} ", pe);
+      break;
+    case 3:
+      pe = pe/2;
+      Console.Write("necessita pagar 2 veze o preço de: {0:F2} ", pe);
+      break;
+    case 4:
+      pe = pe+(pe*0.1)/3;
+      Console.Write("necessita pagar 2 veze o preço de: {0:F2}", pe);
+      break;
+    }
+      }
+    }
+}
