@@ -1,0 +1,28 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    int sm=0, co=0, vl;
+    double md;
+    
+    while(true)
+    {
+      Console.Write("digite um numero inteiro: ");
+      vl= int.Parse(Console.ReadLine());
+      if(vl <0)
+    {
+    break;
+      }
+      sm += vl; co++;
+    }
+    if(co>0){
+    md= sm / co;
+    Console.Write("A media é: {0} ", md);
+    Console.Write("A soma dos valores é:{0} ", sm);
+      }
+    else
+    Console.WriteLine("invalido");
+    
+    }
+}
