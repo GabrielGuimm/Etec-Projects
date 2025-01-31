@@ -1,0 +1,15 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    int anos=0;
+    double ana= 1.50,fel=1.10,anac=0.02,felc=0.03;
+      while(ana >= fel){
+        ana += anac;
+        fel += felc;
+        anos++;
+      }
+      Console.Write("sera necessario {0} anos", anos);
+    }
+}
